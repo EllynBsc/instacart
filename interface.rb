@@ -125,15 +125,11 @@ puts "Hello user, Which first item do you want to buy? "
 user_item = gets.chomp
 
 until user_item == "quit"
-  # puts "Which item do you want to buy? quit to checkout"
-  # user_item = gets.chomp
-
   puts "How much of this item do you want ?" if user_item != "quit"
   user_item_quantity = gets.chomp.to_i
 
   if user_item != "quit"
     if store_items.key?(user_item)
-      # add a key value pair in a hash.
       shopping_cart[user_item] = user_item_quantity
     else
       puts "Sorry, we don't have #{user_item} today.."
